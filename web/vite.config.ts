@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   plugins: [react(), tailwindcss(), viteSingleFile()],
   build: {
-    outDir: path.resolve(__dirname, "../dist"),
+    outDir: "dist",
     emptyOutDir: true,
   },
   resolve: {

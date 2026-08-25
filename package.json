@@ -17,7 +17,7 @@
     "start": "npm run start -w server",
     "build": "npm run build -w web",
     "build:server": "npm run build -w server",
-    "build:all": "npm run build && npm run build:server",
+    "build:all": "npm run build && npm run build:server && node -e \"import('node:fs').then(fs=>fs.cpSync('web/dist','dist',{recursive:true}))\"",
     "preview": "npm run preview -w web",
     "typecheck": "npm run typecheck -w web && npm run typecheck -w server"
   },
